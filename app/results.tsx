@@ -35,12 +35,12 @@ export default function ResultsScreen() {
   const hasSaved = useRef(false);
 
   useEffect(() => {
-    if (gameState && !hasSaved.current && subscriptionTier !== 'free') {
+    if (gameState && !hasSaved.current) {
       hasSaved.current = true;
       saveGame(gameState);
       console.log('[Results] Game saved to history');
     }
-  }, [gameState, subscriptionTier, saveGame]);
+  }, [gameState, saveGame]);
 
   const confettiAnim = useRef(new Animated.Value(0)).current;
   const trophyScale = useRef(new Animated.Value(0)).current;

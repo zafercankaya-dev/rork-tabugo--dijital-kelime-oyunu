@@ -96,7 +96,7 @@ export default function HomeScreen() {
   if (isLoading) return <View style={styles.container}><LinearGradient colors={['#0A0E21', '#121837', '#0A0E21']} style={StyleSheet.absoluteFill} /></View>;
   if (!user) return <View style={styles.container}><LinearGradient colors={['#0A0E21', '#121837', '#0A0E21']} style={StyleSheet.absoluteFill} /></View>;
 
-  const tierLabel = subscriptionTier === 'plus' ? 'Plus' : subscriptionTier === 'elite' ? 'Elite' : null;
+  const tierLabel = subscriptionTier === 'premium' ? 'Premium' : subscriptionTier === 'elite' ? 'Elite' : null;
 
   return (
     <View style={styles.container}>

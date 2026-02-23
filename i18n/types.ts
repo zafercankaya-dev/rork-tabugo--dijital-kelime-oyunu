@@ -142,6 +142,7 @@ export interface Translations {
     customDifficulty: string;
     comingSoon: string;
     upgradeTo: string;
+    gameHistoryFeature: string;
     restoreError: string;
     restoreSuccess: string;
     restoreNotFound: string;

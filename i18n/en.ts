@@ -141,7 +141,8 @@ export const en: Translations = {
     adFree: 'Ad-free experience',
     customDifficulty: 'Custom difficulty levels',
     comingSoon: 'Coming Soon',
-    upgradeTo: 'Upgrade to Plus',
+    upgradeTo: 'Upgrade to Premium',
+    gameHistoryFeature: 'Game history & statistics',
     restoreError: 'Restore failed.',
     restoreSuccess: 'Your subscription has been restored.',
     restoreNotFound: 'No active subscription found to restore.',
@@ -154,7 +155,7 @@ export const en: Translations = {
   history: {
     title: 'Game History',
     premiumFeature: 'Premium Feature',
-    premiumDesc: 'Upgrade to Plus or Elite to view game history, detailed stats, and leaderboards.',
+    premiumDesc: 'Upgrade to Premium or Elite to view game history, detailed stats, and leaderboards.',
     upgradeButton: 'Upgrade Subscription',
     noHistory: 'No game history yet',
     noHistoryDesc: 'Completed games will appear here.',

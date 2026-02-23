@@ -77,7 +77,7 @@ export default function ProfileScreen() {
     changeLanguage(newLang);
   };
 
-  const tierLabel = subscriptionTier === 'plus' ? 'Plus' : subscriptionTier === 'elite' ? 'Elite' : t.subscription.free;
+  const tierLabel = subscriptionTier === 'premium' ? 'Premium' : subscriptionTier === 'elite' ? 'Elite' : t.subscription.free;
   const tierColor = subscriptionTier === 'free' ? Colors.textMuted : Colors.gold;
   const dateLocale = language === 'tr' ? 'tr-TR' : 'en-US';
 

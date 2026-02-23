@@ -24,7 +24,7 @@ export interface UserProfile {
   createdAt: string;
 }
 
-export type SubscriptionTier = 'free' | 'plus' | 'elite';
+export type SubscriptionTier = 'free' | 'premium' | 'elite';
 
 function generateGuestId(): string {
   return 'guest_' + Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
@@ -101,7 +101,7 @@ export const [AuthProvider, useAuth] = createContextHook(() => {
     if (entitlementQuery.data) {
       const info = entitlementQuery.data;
       if (info.entitlements?.active?.['pro']) {
-        setSubscriptionTier('plus');
+        setSubscriptionTier('premium');
       } else {
         setSubscriptionTier('free');
       }
@@ -127,6 +127,7 @@ export const [AuthProvider, useAuth] = createContextHook(() => {
       isGuest: true,
       createdAt: new Date().toISOString(),
     };
+    setUser(profile);
     saveProfileMutation.mutate(profile);
     return profile;
   }, [saveProfileMutation]);
@@ -149,6 +150,7 @@ export const [AuthProvider, useAuth] = createContextHook(() => {
       };
       accounts[normalizedEmail] = { profile, password };
       await AsyncStorage.setItem(ACCOUNTS_STORAGE_KEY, JSON.stringify(accounts));
+      setUser(profile);
       saveProfileMutation.mutate(profile);
       console.log('[Auth] Registered:', normalizedEmail);
       return profile;
@@ -172,6 +174,7 @@ export const [AuthProvider, useAuth] = createContextHook(() => {
         console.log('[Auth] Wrong password for:', normalizedEmail);
         return { success: false, error: 'Şifre hatalı.' };
       }
+      setUser(account.profile);
       saveProfileMutation.mutate(account.profile);
       console.log('[Auth] Login success:', normalizedEmail);
       return { success: true };

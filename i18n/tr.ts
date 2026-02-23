@@ -141,7 +141,8 @@ export const tr: Translations = {
     adFree: 'Reklamsız deneyim',
     customDifficulty: 'Özel zorluk seviyeleri',
     comingSoon: 'Yakında',
-    upgradeTo: "Plus'a Yükselt",
+    upgradeTo: "Premium'a Yükselt",
+    gameHistoryFeature: 'Oyun geçmişi & istatistikler',
     restoreError: 'Geri yükleme başarısız oldu.',
     restoreSuccess: 'Aboneliğiniz geri yüklendi.',
     restoreNotFound: 'Geri yüklenecek aktif abonelik bulunamadı.',
@@ -154,7 +155,7 @@ export const tr: Translations = {
   history: {
     title: 'Oyun Geçmişi',
     premiumFeature: 'Premium Özellik',
-    premiumDesc: 'Oyun geçmişini görmek, detaylı istatistikleri incelemek ve liderlik tablolarına erişmek için Plus veya Elite aboneliğe yükseltin.',
+    premiumDesc: 'Oyun geçmişini görmek, detaylı istatistikleri incelemek ve liderlik tablolarına erişmek için Premium veya Elite aboneliğe yükseltin.',
     upgradeButton: 'Aboneliğe Yükselt',
     noHistory: 'Henüz oyun geçmişi yok',
     noHistoryDesc: 'Oyunlar tamamlandığında burada görünecek.',

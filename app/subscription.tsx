@@ -130,6 +130,7 @@ export default function SubscriptionScreen() {
     { text: t.subscription.basicWordPool, included: true },
     { text: t.subscription.unlimitedGames, included: true },
     { text: t.subscription.playerRange, included: true },
+    { text: t.subscription.gameHistoryFeature, included: false },
     { text: t.subscription.expandedWordPool, included: false },
     { text: t.subscription.adFree, included: false },
     { text: t.subscription.customDifficulty, included: false },
@@ -139,6 +140,7 @@ export default function SubscriptionScreen() {
     { text: t.subscription.basicWordPool, included: true },
     { text: t.subscription.unlimitedGames, included: true },
     { text: t.subscription.playerRange, included: true },
+    { text: t.subscription.gameHistoryFeature, included: true },
     { text: t.subscription.expandedWordPool, included: true },
     { text: t.subscription.adFree, included: true },
     { text: t.subscription.customDifficulty, included: false },
@@ -148,6 +150,7 @@ export default function SubscriptionScreen() {
     { text: t.subscription.basicWordPool, included: true },
     { text: t.subscription.unlimitedGames, included: true },
     { text: t.subscription.playerRange, included: true },
+    { text: t.subscription.gameHistoryFeature, included: true },
     { text: t.subscription.expandedWordPool, included: true },
     { text: t.subscription.adFree, included: true },
     { text: t.subscription.customDifficulty, included: true },
@@ -164,8 +167,8 @@ export default function SubscriptionScreen() {
       icon: <Star size={22} color={Colors.textMuted} />,
     },
     {
-      id: 'plus',
-      name: 'Plus',
+      id: 'premium',
+      name: 'Premium',
       price: selectedPlan === 'monthly' ? monthlyPrice : yearlyPrice,
       period: selectedPlan === 'monthly' ? '/mo' : '/yr',
       features: plusFeatures,
@@ -215,7 +218,7 @@ export default function SubscriptionScreen() {
         {subscriptionTier !== 'free' && (
           <View style={styles.activeBanner}>
             <Check size={18} color={Colors.success} />
-            <Text style={styles.activeBannerText}>{t.subscription.activeSubscription} {subscriptionTier === 'plus' ? 'Plus' : 'Elite'}</Text>
+            <Text style={styles.activeBannerText}>{t.subscription.activeSubscription} {subscriptionTier === 'premium' ? 'Premium' : 'Elite'}</Text>
           </View>
         )}
 
