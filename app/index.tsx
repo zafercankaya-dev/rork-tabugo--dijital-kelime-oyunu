@@ -6,11 +6,12 @@ import {
   TouchableOpacity,
   Animated,
   Dimensions,
+  Image,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Play, Crown, User, Zap, MessageCircleOff } from 'lucide-react-native';
+import { Play, Crown, User, Zap } from 'lucide-react-native';
 import { Colors } from '@/constants/colors';
 import { useGame } from '@/contexts/GameContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -161,14 +162,11 @@ export default function HomeScreen() {
               },
             ]}
           >
-            <LinearGradient
-              colors={[Colors.primary, '#FF8A65']}
-              style={styles.logoBg}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 1 }}
-            >
-              <MessageCircleOff size={48} color="#FFF" strokeWidth={2.5} />
-            </LinearGradient>
+            <Image
+              source={require('../assets/images/icon.png')}
+              style={styles.logoImage}
+              resizeMode="cover"
+            />
           </Animated.View>
 
           <Animated.View style={{ transform: [{ scale: logoScale }] }}>
@@ -328,12 +326,10 @@ const styles = StyleSheet.create({
   logoContainer: {
     marginBottom: 20,
   },
-  logoBg: {
+  logoImage: {
     width: 100,
     height: 100,
     borderRadius: 28,
-    justifyContent: 'center',
-    alignItems: 'center',
     shadowColor: Colors.primary,
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.4,
