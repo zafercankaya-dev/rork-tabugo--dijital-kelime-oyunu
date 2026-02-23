@@ -12,7 +12,7 @@ import {
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Zap, ArrowRight, Mail, Lock, User } from 'lucide-react-native';
+import { Zap, ArrowRight, Mail, Lock, User, MessageCircleOff } from 'lucide-react-native';
 import { Colors } from '@/constants/colors';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -115,7 +115,7 @@ export default function WelcomeScreen() {
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 1 }}
             >
-              <Text style={styles.logoIcon}>🚫</Text>
+              <MessageCircleOff size={42} color="#FFF" strokeWidth={2.5} />
             </LinearGradient>
             <Text style={styles.title}>
               Tabu<Text style={styles.titleAccent}>Go</Text>
