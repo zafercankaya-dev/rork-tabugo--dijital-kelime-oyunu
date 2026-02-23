@@ -10,7 +10,7 @@ import {
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Play, Crown, User, Zap } from 'lucide-react-native';
+import { Play, Crown, User, Zap, MessageCircleOff } from 'lucide-react-native';
 import { Colors } from '@/constants/colors';
 import { useGame } from '@/contexts/GameContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -167,7 +167,7 @@ export default function HomeScreen() {
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 1 }}
             >
-              <Text style={styles.logoIcon}>🚫</Text>
+              <MessageCircleOff size={48} color="#FFF" strokeWidth={2.5} />
             </LinearGradient>
           </Animated.View>
 
